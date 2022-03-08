@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Age In Days</title>
+    <script>
+      function checkAge() {
+        var age;
+        age = Number(document.getElementById("age").value);
+        return (document.getElementById("display").innerHTML = age * 365);
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <form method="post">
+        <label for="age">Enter Age</label><br /><br />
+        <input type="text" name="age" id="age" /><br /><br />
+        <button onclick="checkAge()" type="button">Submit Age</button>
+      </form>
+      <br /><br />
+      <div>Age in Days : <span id="display"></span></div>
+    </center>
+  </body>
+</html>

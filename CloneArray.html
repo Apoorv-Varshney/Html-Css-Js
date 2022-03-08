@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clone an Array</title>
+    <script>
+        function cloning() {
+            var first = Number(document.getElementById("first").value);
+            var second = Number(document.getElementById("second").value);
+            var third = Number(document.getElementById("third").value);
+            var fourth = Number(document.getElementById("fourth").value);
+            var array = [first,second,third,fourth];
+ 
+            var clone = "";
+            for (let index = 0; index < array.length; index++) {
+                clone += array[index];
+            }
+            return document.getElementById("fetch").innerHTML = clone;
+        }
+    </script>
+  </head>
+  <body>
+      <center>
+    <form method="post">
+        <label for="age">Enter Array Elements</label><br /><br />
+        <input type="text" name="first" id="first" /><br /><br />
+        <input type="text" name="second" id="second" /><br /><br />
+        <input type="text" name="third" id="third" /><br /><br />
+        <input type="text" name="fourth" id="fourth" /><br /><br />
+        <button type="button" onclick="cloning()">Save Values</button><br /><br />
+        <div> cloned array is : <span id = "fetch"></span></div>
+    </center>
+    </form>
+  </body>
+</html>

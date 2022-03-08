@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Check if Array</title>
+    <script>
+      function checking() {
+        var array = [1, 2, 3, 4, 5, 6];
+        var ans1 = Array.isArray(array);
+        var ans2 = array instanceof Array;
+        var ans3 = array.constructor === Array;
+        document.getElementById("first").innerHTML = ans1;
+        document.getElementById("second").innerHTML = ans2;
+        document.getElementById("third").innerHTML = ans1;
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <div id="container">
+        Check Array in three Ways:<br /><br />
+        <button type="button" onclick="checking()">Press to Check</button>
+        <br /><br />
+        <div>By is Array() method : <span id="first"></span></div>
+        <br /><br />
+        <div>By instanceof Operator : <span id="second"></span></div>
+        <br /><br />
+        <div>By Constructor Property : <span id="third"></span></div>
+        <br /><br />
+      </div>
+    </center>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Api Data Fetch</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      async function fetching() {
+        try {
+          const api_url = "https://jsonplaceholder.typicode.com/users";
+          const response = await fetch(api_url);
+          var data = await response.json();
+        } catch (error) {
+          console.log(error);
+        }
+        var mainDiv = document.getElementById("container");
+
+        for (var i = 0; i < data.length; i++) {
+          var div = document.createElement("div");
+          div.innerHTML =
+            "id: " +
+            data[i].id +
+            "\tname: " +
+            data[i].name +
+            "\tusername: " +
+            data[i].username +
+            "\tphone: " +
+            data[i].phone +
+            "\twebsite: " +
+            data[i].website;
+          mainDiv.appendChild(div);
+        }
+      }
+      fetching();
+    </script>
+  </body>
+</html>

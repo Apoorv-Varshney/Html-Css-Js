@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Area of Triangle</title>
+    <script>
+      function calculate() {
+        var height = Number(document.getElementById("height").value);
+        var width = Number(document.getElementById("width").value);
+        return document.getElementById("display").innerHTML = (0.5 * height * width);
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <form method="post">
+        <label for="height">Enter Height</label><br /><br />
+        <input type="text" name="height" id="height" /><br /><br />
+        <label for="width">Enter Width</label><br /><br />
+        <input type="text" name="width" id="width" /><br /><br />
+        <button onclick="calculate()" type="button">Submit</button>
+      </form>
+      <br /><br />
+      <div>Area of Triangle : <span id="display"></span></div>
+    </center>
+  </body>
+</html>
